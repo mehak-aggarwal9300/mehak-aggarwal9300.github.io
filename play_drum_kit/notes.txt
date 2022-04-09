@@ -1,0 +1,99 @@
+You cannot re-declare a variable declared with let or const.
+Variables defined with let cannot be redeclared, with var you can
+
+let and const. These two keywords provide Block Scope in JavaScript.
+Variables declared inside a { } block cannot be accessed from outside the block
+
+Redeclaring a variable using the var keyword can impose problems.
+Redeclaring a variable inside a block will also redeclare the variable outside the block:
+let: Redeclaring a variable inside a block will not redeclare the variable outside the block:
+With let, redeclaring a variable in the same block is NOT allowed
+
+Variables defined with var are hoisted to the top and can be initialized at any time.
+Meaning: You can use the variable before it is declared:
+https://www.w3schools.com/js/js_const.asp
+
+
+typeof "John" //string
+Accessing a function without () will return the function definition instead of the function result
+
+Do Not Declare Strings, Numbers, and Booleans as Objects!
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+x = new String();        // Declares x as a String object
+y = new Number();        // Declares y as a Number object
+z = new Boolean();       // Declares z as a Boolean object
+Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
+
+Comparing two JavaScript objects always returns false.
+
+## Strings (immutable)
+All string methods return a new string. They don't modify the original string.
+Strings are immutable: Strings cannot be changed, only replaced.
+
+There are 3 methods for extracting a part of a string:
+slice(start, end)     //start to end-1
+substring(start, end) //The difference is that substring() cannot accept negative indexes.
+substr(start, length) //substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.
+
+The replace() method replaces a specified value with another value in a string:
+does not change the string it is called on, returns a new string. replaces only the first match
+regular expressions:
+let newText = text.replace(/Microsoft/g, "W3Schools"); // replace all occurrences using /g
+let newText = text.replace(/MICROSOFT/i, "W3Schools");  / /i for case insensitive
+
+A string can be converted to an array with the split() method:
+text.split(",")    // Split on commas
+text.split(" ")    // Split on spaces
+text.split("|")    // Split on pipe
+If the separator is omitted, the returned array will contain the whole string in index [0].
+If the separator is "", the returned array will be an array of single characters:
+
+
+#event listener
+document.querySelector("button").addEventListener("click", handleClick);
+first argumet - event that happened
+second argumet- we do not add () to function name, since we do not want to call event by default, but called only later when our event happens
+
+function handleClick(){
+  alert("I got clicked!");
+}
+
+## using an anonymous function, without a name
+document.querySelector("button").addEventListener("click", function handleClick(){
+  alert("I got clicked!");
+}
+);
+
+//applied to all the drums
+var noofdrums=document.querySelectorAll(".drum").length;
+for (var i = 0; i <noofdrums; i++) {
+document.querySelectorAll(".drum")[i].addEventListener("click",function(){
+  alert("I got clicked!");
+});
+}
+
+#Calling different functions
+## Higher order functions: functions that take other functions as inputs
+
+function add(n1,n2)
+{
+  return n1+n2;
+}
+
+function multiply(n1,n2)
+{
+  return n1+n2;
+}
+
+function calculator(n1,n2,operator)
+{
+  return operator(n1+n2);
+}
+//now call by- calculator(3,4,multiply);
+
+## chrome debugger-
+debugger;
+
+
+## Higher Order Functions: addEventListener fun that Take func(), as an input
+## Callback
